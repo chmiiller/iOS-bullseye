@@ -41,7 +41,10 @@ struct ContentView: View {
                 }
                 .padding(20.0)
                 .background(
-                    Color.blue
+                    ZStack {
+                        Color("ButtonColor")
+                        LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
+                    }
                 )
                 .foregroundColor(.white)
                 .cornerRadius(21.0)
