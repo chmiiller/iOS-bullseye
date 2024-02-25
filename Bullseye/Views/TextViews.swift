@@ -21,6 +21,23 @@ struct InstructionText: View {
     }
 }
 
-#Preview {
-    InstructionText(text: "🎯\nPut the Bullseye as close as you can to:")
+struct BigNumberText: View {
+    var text: String
+
+    var body: some View {
+        Text(text)
+            .font(.largeTitle)
+            .kerning(-1.0)
+            .fontWeight(.black)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
+struct TextViews_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            InstructionText(text: "🎯\nPut the Bullseye as close as you can to:")
+            BigNumberText(text: "99")
+        }
+    }
 }
