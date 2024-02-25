@@ -24,16 +24,20 @@ struct ContentView: View {
                     .font(.footnote)
                     .kerning(2.0)
                     .padding(.horizontal, 30)
+                    .foregroundColor(Color("TextColor"))
                 Text(String(game.target))
                     .font(.largeTitle)
                     .kerning(-1.0)
                     .fontWeight(.black)
+                    .foregroundColor(Color("TextColor"))
                 HStack {
                     Text("1")
                         .bold()
+                        .foregroundColor(Color("TextColor"))
                     Slider(value: $sliderValue, in: 1.0...100.0)
                     Text("100")
                         .bold()
+                        .foregroundColor(Color("TextColor"))
                 }
                 .padding()
                 Button("Hit me".uppercased()) {
@@ -71,6 +75,10 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+        ContentView()
+            .preferredColorScheme(.dark)
+    }
 }
