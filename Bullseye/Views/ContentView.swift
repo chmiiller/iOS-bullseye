@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var alertIsVisible: Bool = false
-    @State private var sliderValue: Double = 50.0
-    @State private var game: Game = Game()
+    @State private var alertIsVisible = false
+    @State private var sliderValue = 50.0
+    @State private var game = Game()
     
     var body: some View {
         VStack {
@@ -43,7 +43,7 @@ struct ContentView: View {
                     }
                 },
                message: {
-                   let roundValue: Int = Int(sliderValue.rounded())
+                   let roundValue = Int(sliderValue.rounded())
                    Text("""
                         Slider value is: \(roundValue).
                         You scored \(game.points(sliderValue: roundValue))
