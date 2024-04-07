@@ -14,8 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color("BackgroundColor")
-                .ignoresSafeArea()
+            BackgroundView(game: $game)
             VStack {
                 InstructionsView(game: $game)
                 SliderView(sliderValue: $sliderValue)
@@ -43,8 +42,10 @@ struct SliderView: View {
     var body: some View {
         HStack {
             SliderLabelText(text: "1")
+                .frame(width: 35)
             Slider(value: $sliderValue, in: 1.0...100.0)
             SliderLabelText(text: "100")
+                .frame(width: 35)
         }
         .padding()
     }
@@ -65,6 +66,10 @@ struct HitMeButton: View {
                 Color("ButtonColor")
                 LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
             }
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 21)
+                .strokeBorder(Color.white, lineWidth: 2.0)
         )
         .foregroundColor(.white)
         .cornerRadius(21.0)
@@ -94,5 +99,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
         ContentView()
             .preferredColorScheme(.dark)
+            .previewDisplayName("Dark Mode")
     }
 }
