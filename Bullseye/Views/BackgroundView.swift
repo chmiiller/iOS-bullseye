@@ -23,19 +23,20 @@ struct BackgroundView: View {
 }
 
 struct RingsView: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
+            let opacity = colorScheme == ColorScheme.dark ? 0.1 : 0.5
+            let gradient: RadialGradient = RadialGradient(
+                gradient: Gradient(colors: [Color("RingsColor").opacity(opacity), Color("RingsColor").opacity(0)]),
+                center: .center, startRadius: 100, endRadius: 300
+            )
             ForEach(1..<6) { ring in
                 let size = CGFloat(ring * 100)
                 Circle()
                     .stroke(lineWidth: 20.0)
-                    .fill(
-                        RadialGradient(
-                            gradient: Gradient(colors: [Color("RingsColor").opacity(0.4), Color("RingsColor").opacity(0)]),
-                            center: .center, startRadius: 100, endRadius: 300
-                        )
-                    )
+                    .fill(gradient)
                     .frame(width: size, height: size)
             }
         }
