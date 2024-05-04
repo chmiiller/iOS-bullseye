@@ -70,7 +70,9 @@ struct HitMeButton: View {
             startPoint: .top, endPoint: .bottom
         )
         Button("Hit me".uppercased()) {
-            alertIsVisible = true
+            withAnimation {
+                alertIsVisible = true
+            }
         }
         .padding(20.0)
         .background(
