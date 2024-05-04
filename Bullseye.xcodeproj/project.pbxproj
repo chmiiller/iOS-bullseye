@@ -15,6 +15,7 @@
 		B314C4FD2BC31FA400AD4EA6 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B314C4FC2BC31FA400AD4EA6 /* Shapes.swift */; };
 		B314C4FF2BC3242100AD4EA6 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B314C4FE2BC3242100AD4EA6 /* RoundedViews.swift */; };
 		B314C5012BC329C600AD4EA6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B314C5002BC329C600AD4EA6 /* BackgroundView.swift */; };
+		B32CB1032BE6DC3F00F25661 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32CB1022BE6DC3F00F25661 /* PointsView.swift */; };
 		B3A4F5A22B8BBA4300540E6B /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4F5A12B8BBA4300540E6B /* BullseyeTests.swift */; };
 		B3A4F5A92B8BC8C800540E6B /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4F5A82B8BC8C800540E6B /* TextViews.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		B314C4FC2BC31FA400AD4EA6 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		B314C4FE2BC3242100AD4EA6 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		B314C5002BC329C600AD4EA6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		B32CB1022BE6DC3F00F25661 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		B3A4F59F2B8BBA4300540E6B /* BullseyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullseyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A4F5A12B8BBA4300540E6B /* BullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeTests.swift; sourceTree = "<group>"; };
 		B3A4F5A82B8BC8C800540E6B /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				B3A4F5A82B8BC8C800540E6B /* TextViews.swift */,
 				B314C4FE2BC3242100AD4EA6 /* RoundedViews.swift */,
 				B314C5002BC329C600AD4EA6 /* BackgroundView.swift */,
+				B32CB1022BE6DC3F00F25661 /* PointsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				B314C4FF2BC3242100AD4EA6 /* RoundedViews.swift in Sources */,
 				B30599C42B641F01003DF519 /* ContentView.swift in Sources */,
 				B3A4F5A92B8BC8C800540E6B /* TextViews.swift in Sources */,
+				B32CB1032BE6DC3F00F25661 /* PointsView.swift in Sources */,
 				B314C5012BC329C600AD4EA6 /* BackgroundView.swift in Sources */,
 				B314C4FD2BC31FA400AD4EA6 /* Shapes.swift in Sources */,
 				B30599D32B6436FB003DF519 /* Game.swift in Sources */,

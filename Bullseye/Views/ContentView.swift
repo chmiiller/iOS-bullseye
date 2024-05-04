@@ -13,14 +13,21 @@ struct ContentView: View {
     @State private var game = Game()
     
     var body: some View {
+        let padding: CGFloat = alertIsVisible ? 0 : 100
         ZStack {
             BackgroundView(game: $game)
             VStack {
                 InstructionsView(game: $game)
-                    .padding(.bottom, 100)
-                HitMeButton(game: $game, sliderValue: $sliderValue, alertIsVisible: $alertIsVisible)
+                    .padding(.bottom, padding)
+                if alertIsVisible {
+                    PointsView(game: $game, sliderValue: $sliderValue, alertIsVisible: $alertIsVisible)
+                } else {
+                    HitMeButton(game: $game, sliderValue: $sliderValue, alertIsVisible: $alertIsVisible)
+                }
             }
-            SliderView(sliderValue: $sliderValue)
+            if !alertIsVisible {
+                SliderView(sliderValue: $sliderValue)
+            }
         }
     }
 }
@@ -80,23 +87,6 @@ struct HitMeButton: View {
         .cornerRadius(21.0)
         .bold()
         .font(.title3)
-        .alert(
-            "Hi there",
-           isPresented: $alertIsVisible,
-            actions: {
-                Button("OK") {
-                    let roundValue = Int(sliderValue.rounded())
-                    game.startNewRound(points: game.points(sliderValue: roundValue))
-                }
-            },
-           message: {
-               let roundValue = Int(sliderValue.rounded())
-               Text("""
-                    Slider value is: \(roundValue).
-                    You scored \(game.points(sliderValue: roundValue))
-                """)
-           }
-        )
     }
 }
 

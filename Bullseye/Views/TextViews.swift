@@ -55,12 +55,39 @@ struct LabelText: View {
     }
 }
 
+struct BodyText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .multilineTextAlignment(.center)
+            .lineSpacing(12.0)
+    }
+}
+
+struct ButtonText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .bold()
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.accentColor)
+            .foregroundColor(.white)
+            .cornerRadius(12.0)
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             InstructionText(text: "🎯\nPut the Bullseye as close as you can to:")
             BigNumberText(text: "99")
             LabelText(text: "round")
+            BodyText(text: "You scored 200 points 🔥")
+            ButtonText(text: "Start a new round")
         }
+        .padding()
     }
 }
