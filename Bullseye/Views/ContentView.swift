@@ -82,11 +82,11 @@ struct HitMeButton: View {
             }
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 21)
-                .strokeBorder(Color.white, lineWidth: 2.0)
+            RoundedRectangle(cornerRadius: Constants.roundRectCornerRadius)
+                .strokeBorder(Color.white, lineWidth: Constants.strokeWidth)
         )
         .foregroundColor(.white)
-        .cornerRadius(21.0)
+        .cornerRadius(Constants.roundRectCornerRadius)
         .bold()
         .font(.title3)
     }
