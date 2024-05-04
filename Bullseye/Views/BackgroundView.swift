@@ -30,7 +30,7 @@ struct TopView: View {
         }
     }
 }
-
+// used for the Score and Round labels
 struct NumberView: View {
     var title: String
     var text: String
