@@ -17,9 +17,10 @@ struct ContentView: View {
             BackgroundView(game: $game)
             VStack {
                 InstructionsView(game: $game)
-                SliderView(sliderValue: $sliderValue)
+                    .padding(.bottom, 100)
                 HitMeButton(game: $game, sliderValue: $sliderValue, alertIsVisible: $alertIsVisible)
             }
+            SliderView(sliderValue: $sliderValue)
         }
     }
 }
@@ -57,6 +58,10 @@ struct HitMeButton: View {
     @Binding var alertIsVisible: Bool
 
     var body: some View {
+        let gradient = LinearGradient(
+            gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]),
+            startPoint: .top, endPoint: .bottom
+        )
         Button("Hit me".uppercased()) {
             alertIsVisible = true
         }
@@ -64,7 +69,7 @@ struct HitMeButton: View {
         .background(
             ZStack {
                 Color("ButtonColor")
-                LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
+                gradient
             }
         )
         .overlay(
