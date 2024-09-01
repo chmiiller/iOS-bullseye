@@ -11,6 +11,21 @@ struct Game {
     var target = Int.random(in: 1...100)
     var score = 0
     var round = 1
+    var leaderboardEntries: [LeaderboardEntry] = []
+    
+    init(loadTestData: Bool = false) {
+        if loadTestData {
+            addToLeaderboard(score: 100)
+            addToLeaderboard(score: 80)
+            addToLeaderboard(score: 230)
+            addToLeaderboard(score: 50)
+            addToLeaderboard(score: 590)
+            addToLeaderboard(score: 12)
+            addToLeaderboard(score: 617)
+            addToLeaderboard(score: 90)
+            addToLeaderboard(score: 101)
+        }
+    }
     
     func points(sliderValue: Int) -> Int {
         let difference: Int = abs(target - sliderValue)
@@ -27,6 +42,7 @@ struct Game {
     }
     
     mutating func startNewRound(points: Int) {
+        addToLeaderboard(score: points)
         score += points
         round += 1
         target = Int.random(in: 1...100)
@@ -37,4 +53,20 @@ struct Game {
         round = 1
         target = Int.random(in: 1...100)
     }
+    
+    mutating func addToLeaderboard(score: Int) {
+        leaderboardEntries.append(LeaderboardEntry(score: score, date: Date()))
+        sortLeaderboardEntries()
+    }
+    
+    private mutating func sortLeaderboardEntries() {
+        leaderboardEntries.sort { entry1, entry2 in
+            entry1.score > entry2.score
+        }
+    }
+}
+
+struct LeaderboardEntry {
+    let score: Int
+    let date: Date
 }

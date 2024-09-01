@@ -19,6 +19,7 @@
 		B32CB1052BE6E4AA00F25661 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32CB1042BE6E4AA00F25661 /* Constants.swift */; };
 		B3A4F5A22B8BBA4300540E6B /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4F5A12B8BBA4300540E6B /* BullseyeTests.swift */; };
 		B3A4F5A92B8BC8C800540E6B /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4F5A82B8BC8C800540E6B /* TextViews.swift */; };
+		B3A52F442C84DDC300E8988A /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A52F432C84DDC300E8988A /* LeaderboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		B3A4F59F2B8BBA4300540E6B /* BullseyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullseyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A4F5A12B8BBA4300540E6B /* BullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeTests.swift; sourceTree = "<group>"; };
 		B3A4F5A82B8BC8C800540E6B /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		B3A52F432C84DDC300E8988A /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				B314C4FE2BC3242100AD4EA6 /* RoundedViews.swift */,
 				B314C5002BC329C600AD4EA6 /* BackgroundView.swift */,
 				B32CB1022BE6DC3F00F25661 /* PointsView.swift */,
+				B3A52F432C84DDC300E8988A /* LeaderboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A52F442C84DDC300E8988A /* LeaderboardView.swift in Sources */,
 				B314C4FF2BC3242100AD4EA6 /* RoundedViews.swift in Sources */,
 				B30599C42B641F01003DF519 /* ContentView.swift in Sources */,
 				B3A4F5A92B8BC8C800540E6B /* TextViews.swift in Sources */,
@@ -402,6 +406,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "BullsEye Game";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,6 +435,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "BullsEye Game";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
