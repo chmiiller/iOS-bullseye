@@ -7,4 +7,4 @@ Bullseye is a simple iOS game where the user has to guess the correct position o
 https://github.com/user-attachments/assets/29bc94f7-0358-4079-ba2f-20735030c0c9
 
 ## What's this repo about
-This is a repo for the [Kodeco](https://www.kodeco.com/ios/paths/learn) learning path "SwiftUI for Beginners" where the first 3 out of 5 video courses teachs us how to implement all the SwiftUI code for the Bullseye game. Also, it has Unit Tests
+This is a repo for the [Kodeco](https://www.kodeco.com/ios/paths/learn) learning path "SwiftUI for Beginners" where the first 3 out of 5 video courses teachs us how to implement all the SwiftUI code for the Bullseye game. The game logic and model is developed using TDD.
